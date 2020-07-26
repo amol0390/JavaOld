@@ -1,0 +1,5 @@
+package com.datam.learning;
+
+public class JdbcSQLServerConnection {
+
+}

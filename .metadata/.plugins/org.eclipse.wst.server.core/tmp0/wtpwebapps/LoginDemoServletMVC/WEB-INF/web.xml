@@ -1,0 +1,42 @@
+
+ 
+<web-app version="2.5" 
+    xmlns="http://java.sun.com/xml/ns/javaee" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+    http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+ 
+  <servlet>
+  	<servlet-name>ControllerServlet</servlet-name>
+  	<servlet-class>LoginValidation.ControllerServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+  	<servlet-name>ControllerServlet</servlet-name>
+  	<url-pattern>/ControllerServlet</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+  	<servlet-name>wel</servlet-name>
+  	<servlet-class>LoginValidation.WelcomeServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>MainControllerServlet</servlet-name>
+  	<servlet-class>com.cud.Model.ControllerServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+  	<servlet-name>wel</servlet-name>
+  	<url-pattern>/wel</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+  	<servlet-name>MainControllerServlet</servlet-name>
+  	<url-pattern>/MainControllerServlet</url-pattern>
+  </servlet-mapping>
+
+
+
+
+</web-app>

@@ -1,0 +1,42 @@
+package com.datam.learning;
+import java.sql.*;
+public class Hello {
+
+	public static void main(String[] args) {
+		
+		// TODO Auto-generated method stub
+		System.out.println("Hello world");
+       System.out.println(getData());
+	}
+
+
+
+public static String getData() {
+    String output = "";
+    try {
+    	 Class.forName("com.microsoft.jdbc.sqlserver.SQLServerDriver");
+
+    	    Connection m_Connection = DriverManager.getConnection(
+    	        "jdbc:microsoft:sqlserver://localhost:1433;DatabaseName=MyDatabase", "userid", "password");
+
+    	    Statement m_Statement = m_Connection.createStatement();
+    	    String query = "SELECT * FROM Student";
+
+    	    ResultSet m_ResultSet = m_Statement.executeQuery(query);
+
+    	    while (m_ResultSet.next()) {
+    	      System.out.println(m_ResultSet.getString(1) + ", " + m_ResultSet.getString(2) + ", "
+    	          + m_ResultSet.getString(3));
+
+    	    }
+    
+    	    m_ResultSet.close();
+    }
+    
+    catch (Exception e) {
+
+        return "ERROR while retrieving data: " + e.getMessage();
+    }
+    return output;
+}
+}

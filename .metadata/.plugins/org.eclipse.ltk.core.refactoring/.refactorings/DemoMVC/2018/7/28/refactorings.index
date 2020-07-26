@@ -1,0 +1,9 @@
+1531038455994	Delete element
+1531038487958	Rename resource 'datam-servlet.xml'
+1531038514899	Delete element
+1531041871144	Rename resource 'abcservlet-servlet.xml'
+1531051190204	Move 'datam' to 'java'
+1531051236365	Move 'datam' to 'com'
+1531051285889	Move 'com' to 'java'
+1531056389781	Move 'display.jsp' to 'test'
+1531056414762	Move 'display.jsp' to 'webapp'
